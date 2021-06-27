@@ -1,0 +1,32 @@
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License version 3 as published by
+#    the Free Software Foundation.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details. <http://www.gnu.org/licenses/>.
+#
+#    Written in 2012 by Jorg Janssen <http://www.zonnigdruten.nl/>
+#
+
+
+Dit programma is alleen getest met één (1) Mastervolt Sunmaster XS2000. Het programma zou
+geschikt moeten zijn voor meerdere, op elkaar aangesloten omvormers maar dat is niet getest! 
+Het programma is waarschijnlijk ook geschikt voor andere Sunmasters dan de XS2000, maar ook
+dat is niet getest!
+
+De aansluiting van de omvormer op het apparaat waarop het programma draait (PC, NAS, ...)
+gebeurt via een rs485-naar-ethernet-converter zoals bijvoorbeeld deze:
+https://www.conik.biz/webwinkel/:///Seriele-communicatie-servers/Ethernet-1-port-serial-server.
+
+Het programma is geschreven voor Python 2.7, zie http://www.python.org.
+
+Uitleg over de Mastervolt-commando's staat op http://zonstraal.forumup.be/about9952-zonstraal.html.
+
+Het programma leest éénmaal de status van de omvormer. De suggestie is om het programma iedere 5 minuten
+te laten draaien. Je kunt daarvoor in Linux een cronjob aanmaken of in Windows een taak via de taakplanner.
+
+De gegevens worden direct verstuurd naar een website. De suggestie is om daar een database te draaien
+om de gegevens in op te slaan (bijvoorbeeld php en MySql).
